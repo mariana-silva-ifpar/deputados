@@ -1,3 +1,4 @@
-@for(dep of deputados; track deputados){
-    
+@for(dep of deputados; track dep.id){
+    <p> {{dep.nome}} </p>
+    <p> {{dep.siglaUf}} - {{dep.siglaPartido}} </p>
 }
