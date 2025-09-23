@@ -12,7 +12,9 @@ export class Inicio {
   deputados: Deputado[] = [];
 
   constructor(private service: DeputadoService){
-    this.deputados = this.service.obterDeputados();
+    this.service.obterDeputados().subscribe(res => {
+      this.deputados = res.dados
+    })
   }
 
 }

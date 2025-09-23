@@ -1,4 +1,5 @@
 @for(dep of deputados; track dep.id){
     <p> {{dep.nome}} </p>
+    <p> <img [src]="dep.urlFoto"> </p>
     <p> {{dep.siglaUf}} - {{dep.siglaPartido}} </p>
 }

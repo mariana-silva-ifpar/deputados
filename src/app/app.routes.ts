@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Inicio } from './inicio/inicio';
 import { Busca } from './busca/busca';
 import { App } from './app';
+import { PaginaNaoEncontrada } from './pagina-nao-encontrada/pagina-nao-encontrada';
 
 export const routes: Routes = [
     {
@@ -16,5 +17,9 @@ export const routes: Routes = [
     {
         path: 'busca',
         component: Busca
+    },
+    {
+        path: '**',
+        component: PaginaNaoEncontrada
     }
 ];
