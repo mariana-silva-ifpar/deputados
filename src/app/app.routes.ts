@@ -1,15 +1,9 @@
 import { Routes } from '@angular/router';
 import { Inicio } from './inicio/inicio';
 import { Busca } from './busca/busca';
-import { App } from './app';
 import { PaginaNaoEncontrada } from './pagina-nao-encontrada/pagina-nao-encontrada';
 
 export const routes: Routes = [
-    {
-        path: '',
-        redirectTo: '/inicio',
-        pathMatch: 'full'
-    },
     {
         path: 'inicio',
         component: Inicio
@@ -17,6 +11,11 @@ export const routes: Routes = [
     {
         path: 'busca',
         component: Busca
+    },
+    {
+        path: '',
+        redirectTo: '/inicio',
+        pathMatch: 'full'
     },
     {
         path: '**',

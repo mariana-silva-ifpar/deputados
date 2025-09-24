@@ -1,0 +1,17 @@
+form {
+    margin-top: 1rem;
+    input{
+        margin-right: .25rem;
+    }
+    button{
+        margin-right: .25rem;
+    }
+}
+
+.loading{
+    background-color: rgb(224, 201, 187);
+}
+
+.error{
+    background-color: rgb(226, 160, 160);
+}

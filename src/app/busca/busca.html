@@ -1,1 +1,30 @@
-<p>busca works!</p>
+<div class="main">
+    <form [formGroup]="form">
+        <input 
+        formControlName="nome"
+        placeholder="Digite o nome do deputado que deseja buscar." >
+
+        <button type="button" (click)="buscarDeputado()" [disabled]="form.invalid"> Buscar </button>
+        <button type="button" (click)="limparBusca()"> Limpar </button>
+    </form>
+
+    <div>
+        @for(dep of deputados; track dep.id){
+            <p> {{dep.nome}} </p>
+            <p> <img [src]="dep.urlFoto"> </p>
+            <p> {{dep.siglaUf}} - {{dep.siglaPartido}} </p>
+}
+    </div>
+
+    <div class="loading">
+        @if(loading){
+            <p> Buscando... </p>
+        }
+    </div>
+
+    <div class="error">
+        @if(semResultado){
+            <p> Nenhum deputado encontrado para essa busca. :/ </p>
+        }
+    </div>
+</div>
