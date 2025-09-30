@@ -40,7 +40,7 @@ export class Busca {
                 }
               },
               error: () => {
-                alert('Erro ao buscar deputado.')
+                this.semResultado = true;
               }
             })
           }
